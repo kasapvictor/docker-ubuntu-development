@@ -21,12 +21,12 @@ RUN apt-get update && \
 # install zsh
 RUN sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
 
-# install NVM
+# install NVM --- not working
 #RUN curl -sL https://raw.githubusercontent.com/creationix/nvm/v0.33.11/install.sh -o install_nvm.sh
 #RUN /bin/bash -c "bash install_nvm.sh"
 #RUN /bin/bash -c "source ~/.nvm/nvm.sh"
 
-# update NODE to 16
+# update NODE to 16 --- not working
 #RUN cd ~
 #RUN curl -sL https://deb.nodesource.com/setup_16.x -o nodesource_setup.sh
 #RUN bash nodesource_setup.sh
