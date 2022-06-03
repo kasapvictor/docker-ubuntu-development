@@ -1,0 +1,11 @@
+{
+  "name": "browser-sync",
+  "version": "1.0.0",
+  "description": "",
+  "keywords": [],
+  "author": "Victor Kasap",
+  "license": "ISC",
+  "devDependencies": {
+    "browser-sync": "^2.27.9"
+  }
+}

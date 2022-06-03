@@ -1,0 +1,13 @@
+app/dist/
+app/.parcel-cache/
+app/node_modules/
+
+.idea/
+.git/
+
+.gitignore
+
+Dockerfile
+docker-compose.yml
+
+README.md

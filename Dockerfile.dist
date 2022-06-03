@@ -1,0 +1,30 @@
+FROM ubuntu
+
+WORKDIR /home/app
+
+# PACKAGES
+RUN apt-get update && \
+	apt-get upgrade -y && \
+	apt-get install -y mc && \
+	apt-get install -y nano && \
+	apt-get install -y curl && \
+	apt-get install -y wget && \
+	apt-get install -y bash && \
+	apt-get install -y zsh && \
+	apt-get install -y nodejs && \
+	apt-get install -y npm
+
+# ZSH
+RUN sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
+
+COPY /app /home/app
+
+RUN npm install -g npm@8.11.0
+
+RUN cd /home/app/; npm install
+
+EXPOSE 4444
+
+RUN export DOCKER_SCAN_SUGGEST=false
+
+CMD npm run server
