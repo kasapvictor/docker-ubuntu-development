@@ -4,8 +4,6 @@ WORKDIR /home/app
 
 COPY /app /home/app
 
-#USER root???
-
 # PACKAGES
 RUN apt-get update && \
 		apt-get upgrade -y && \
