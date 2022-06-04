@@ -4,6 +4,8 @@ WORKDIR /home/app
 
 COPY /app /home/app
 
+#USER root???
+
 # PACKAGES
 RUN apt-get update && \
 		apt-get upgrade -y && \
@@ -21,16 +23,14 @@ RUN apt-get update && \
 # install zsh
 RUN sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
 
-# install NVM --- not working
-#RUN curl -sL https://raw.githubusercontent.com/creationix/nvm/v0.33.11/install.sh -o install_nvm.sh
-#RUN /bin/bash -c "bash install_nvm.sh"
-#RUN /bin/bash -c "source ~/.nvm/nvm.sh"
-
-# update NODE to 16 --- not working
-#RUN cd ~
-#RUN curl -sL https://deb.nodesource.com/setup_16.x -o nodesource_setup.sh
-#RUN bash nodesource_setup.sh
-#RUN apt-get install nodejs -y
+# update NODEJS
+ENV NODE_VERSION=18.3.0
+RUN curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.0/install.sh | bash
+ENV NVM_DIR=/root/.nvm
+RUN . "$NVM_DIR/nvm.sh" && nvm install ${NODE_VERSION}
+RUN . "$NVM_DIR/nvm.sh" && nvm use v${NODE_VERSION}
+RUN . "$NVM_DIR/nvm.sh" && nvm alias default v${NODE_VERSION}
+ENV PATH="/root/.nvm/versions/node/v${NODE_VERSION}/bin/:${PATH}"
 
 RUN npm install -g npm@8.12.1
 

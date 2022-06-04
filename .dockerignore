@@ -1,13 +1,25 @@
-app/dist/
 app/.parcel-cache/
+
 app/node_modules/
 
-.idea/
-.git/
+app/dist/
+
+docker-compose.yml
+
+Dockerfile
+
+.dockerignore
 
 .gitignore
 
-Dockerfile
-docker-compose.yml
+**/.DS_Store
 
 README.md
+
+.idea/
+
+.git/
+
+.env
+
+*.dist
