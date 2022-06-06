@@ -21,7 +21,7 @@ RUN apt-get update && \
 # install zsh
 RUN sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
 
-# update NODEJS
+# update && install NODEJS
 ENV NODE_VERSION=18.3.0
 RUN curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.0/install.sh | bash
 ENV NVM_DIR=/root/.nvm
@@ -34,6 +34,7 @@ RUN npm install -g npm@8.12.1
 
 RUN export DOCKER_SCAN_SUGGEST=false
 
-EXPOSE 4444
-EXPOSE 9000
 EXPOSE 3000
+EXPOSE 4000
+EXPOSE 9000
+
