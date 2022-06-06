@@ -19,30 +19,20 @@ nvm install 18
 nvm use 18
 ```
 
-```bash
-docker build . -t ubuntu/webapp
-
-docker run -it --rm -p 4444:4444 ubuntu/webapp
-```
-----
-
+### Commands 
 
 ```bash
-# build
-docker-compose build
+# build - docker-compose build
+make build
 
-# start
-docker-compose up
+# start - docker-compose up
+make up
 
-# down
-docker-compose dowm
+# down - docker-compose dowm
+make down
 
-# zsh
-docker exec -it webapp /bin/zsh
+# bash - docker exec -it webapp /bin/zsh
+make bash 
 ```
-
-
- - curl -sL https://deb.nodesource.com/setup_18.x | bash -
- - apt-get install nodejs -y
 
 
