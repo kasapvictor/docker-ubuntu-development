@@ -1,6 +1,6 @@
 ################ Docker commands ################
 bash:
-	docker exec -it develop zsh || winpty docker exec -it develop zsh
+	docker exec -it app-webpack zsh || winpty docker exec -it app-webpack zsh
 
 build:
 	docker-compose build --no-cache
