@@ -6,7 +6,7 @@ services:
 
     image: ubuntu-development
 
-    container_name: app-webpack
+    container_name: webpack-app
 
     restart: always
 

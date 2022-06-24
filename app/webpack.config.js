@@ -30,6 +30,14 @@ const HtmlWebpackPluginPages = (pages = []) => pages.map(
 module.exports = {
   mode,
   
+  devServer: {
+    hot: true,
+    host: '0.0.0.0',
+    port: 4444,
+    static: './src',
+    watchFiles: ['./src/**/*'],
+  },
+  
   devtool: 'source-map',
 
   entry: entry(pages),
@@ -50,13 +58,6 @@ module.exports = {
   //     chunks: 'all'
   //   }
   // },
-  
-  devServer: {
-    hot: true,
-    port: 4000,
-    static: './src',
-    watchFiles: ['./src/**/*']
-  },
   
   module: {
     rules: [
