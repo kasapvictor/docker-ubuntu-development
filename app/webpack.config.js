@@ -33,7 +33,7 @@ module.exports = {
   devServer: {
     hot: true,
     host: '0.0.0.0',
-    port: 4444,
+    port: 3000,
     static: './src',
     watchFiles: ['./src/**/*'],
   },
