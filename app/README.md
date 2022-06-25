@@ -1,11 +1,13 @@
 ### Webpack boilerplate
 
+- typescript
+- babel
 - axios
 - onChange
 - pug
 - scss
-- postcss
 - autoprefixer
 - lodash
 - yup
-- jest
+- prettier
+- eslint
