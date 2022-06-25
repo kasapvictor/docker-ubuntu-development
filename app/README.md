@@ -12,13 +12,5 @@
 - prettier
 - eslint
 
-
-### Watch to static files into `app/public`
-```bash
-# app/dist or app/public
-browser-sync --watch --no-notify .
-```
-
-
 ### Links
 - Webpack watch options - https://webpack.js.org/configuration/watch
