@@ -16,16 +16,22 @@ module.exports = {
   watch: true,
 
   watchOptions: {
-    aggregateTimeout: 200,
     poll: 1000,
+    aggregateTimeout: 200,
     ignored: /node_modules/,
   },
 
-  entry: './src/js/index.ts',
+  entry: [
+    './src/js/index.ts',
+  ],
 
   output: {
-    filename: 'index.js',
+    filename: 'js/index.js',
     path: path.resolve(__dirname, 'public'),
+  },
+
+  resolve: {
+    extensions: ['.js', '.ts', '.tsx'],
   },
 
   module: {

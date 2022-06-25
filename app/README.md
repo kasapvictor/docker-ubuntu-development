@@ -18,3 +18,7 @@
 # app/dist or app/public
 browser-sync --watch --no-notify .
 ```
+
+
+### Links
+- Webpack watch options - https://webpack.js.org/configuration/watch
