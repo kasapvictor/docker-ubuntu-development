@@ -21,9 +21,9 @@ module.exports = {
     ignored: /node_modules/,
   },
 
-  entry: [
-    './src/js/index.ts',
-  ],
+  entry: {
+    index: './src/js/index.ts',
+  },
 
   output: {
     filename: 'js/index.js',

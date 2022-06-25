@@ -16,3 +16,8 @@ build-prod: pretty lint
 build-dev:
 	npx webpack --mode development
 
+watch:
+	NODE_ENV=development npx webpack
+
+browser:
+	npx browser-sync --watch --no-notify --port 4000 --host 0.0.0. public
