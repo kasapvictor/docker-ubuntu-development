@@ -1,40 +1,7 @@
 const path = require('path');
-const HtmlWebpackPlugin = require('html-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 
 const mode = process.env.NODE_ENV;
-const pages = [
-  { name: 'index', ext: 'pug', script: 'ts' },
-  { name: 'about', ext: 'html', script: 'js' },
-];
-
-const entry = (pagesList) => {
-  const pageCollection = pagesList;
-
-  return pageCollection.reduce((config, { name, script }) => {
-    const newConfig = config;
-
-    newConfig[name] = path.resolve(__dirname, `./src/js/${name}.${script}`);
-
-    return newConfig;
-  }, {});
-};
-
-const HtmlWebpackPluginPages = (pagesList = []) => {
-  const pageCollection = pagesList;
-
-  return pageCollection.map(
-    ({ name, ext }) =>
-      new HtmlWebpackPlugin({
-        favicon: './src/img/256x256.png',
-        template: `./src/${name}.${ext}`,
-        filename: `${name}.html`,
-        inject: 'body',
-        publicPath: './',
-        chunks: [name],
-      }),
-  );
-};
 
 module.exports = {
   mode,
@@ -46,26 +13,20 @@ module.exports = {
     watchFiles: ['./src/**/*'],
   },
 
-  devtool: 'source-map',
+  watch: true,
 
-  entry: entry(pages),
+  watchOptions: {
+    aggregateTimeout: 200,
+    poll: 1000,
+    ignored: /node_modules/,
+  },
+
+  entry: './src/js/index.ts',
 
   output: {
-    filename: 'js/[name].js',
-    path: path.resolve(__dirname, 'dist'),
-    clean: true,
+    filename: 'index.js',
+    path: path.resolve(__dirname, 'public'),
   },
-
-  resolve: {
-    extensions: ['.ts', '.tsx', '.js'],
-  },
-
-  // на выходе создает отдельный js файл подключаемых библиотек
-  // optimization: {
-  //   splitChunks: {
-  //     chunks: 'all'
-  //   }
-  // },
 
   module: {
     rules: [
@@ -83,7 +44,10 @@ module.exports = {
       // TS
       {
         test: /\.tsx?$/,
-        loader: 'ts-loader',
+        use: 'ts-loader',
+        include: [
+          path.resolve(__dirname, 'src/js'),
+        ],
       },
       // STYLES
       {
@@ -122,17 +86,6 @@ module.exports = {
           filename: 'fonts/[name][ext]',
         },
       },
-      // HTML
-      {
-        test: /\.html$/,
-        use: 'html-loader',
-      },
-      // PUG
-      {
-        test: /\.pug$/i,
-        loader: 'pug-loader',
-        exclude: /(node_modules|bower_components)/,
-      },
     ],
   },
 
@@ -141,6 +94,5 @@ module.exports = {
       new MiniCssExtractPlugin({
         filename: 'css/[name].css',
       }),
-      ...HtmlWebpackPluginPages(pages),
     ],
 };

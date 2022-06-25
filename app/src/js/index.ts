@@ -1,8 +1,12 @@
-import '../scss/home.scss';
-// import '../img/image2.jpg';
+// import '../scss/home.scss';
+// // import '../img/image2.jpg';
+//
+// import { Button } from './components';
+//
+// Button({ containerName: 'button-wrapper', text: 'Button from JS', cls: 'button' });
 
-import { Button } from './components';
+import './common';
+// import { foo } from './home';
 
-Button({ containerName: 'button-wrapper', text: 'Button from JS', cls: 'button' });
-
-console.log('HOME PAGE');
+console.log('HOME PAGE!!');
+// foo();
