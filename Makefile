@@ -1,6 +1,8 @@
 ################ Docker commands ################
+include .env
+
 bash:
-	docker exec -it webpack-public zsh || winpty docker exec -it webpack-public zsh
+	docker exec -it ${CONTAINER_NAME} zsh || winpty docker exec -it ${CONTAINER_NAME} zsh
 
 build:
 	docker-compose build --no-cache
@@ -10,3 +12,6 @@ up:
 
 down:
 	docker-compose down
+
+say:
+	echo ${CONTAINER_NAME}
