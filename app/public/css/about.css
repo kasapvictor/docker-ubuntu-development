@@ -1,6 +1,6 @@
-/*!*******************************************************************************************************************************************************!*\
-  !*** css ./node_modules/css-loader/dist/cjs.js!./node_modules/postcss-loader/dist/cjs.js!./node_modules/sass-loader/dist/cjs.js!./src/scss/home.scss ***!
-  \*******************************************************************************************************************************************************/
+/*!********************************************************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js!./node_modules/postcss-loader/dist/cjs.js!./node_modules/sass-loader/dist/cjs.js!./src/scss/about.scss ***!
+  \********************************************************************************************************************************************************/
 /* UTILS */
 * {
   margin: 0;
@@ -355,7 +355,7 @@ body {
   color: red;
 }
 
-.home {
+.about {
   display: -ms-grid;
   display: grid;
   -webkit-transition: all 0.5s;
@@ -365,9 +365,9 @@ body {
      -moz-user-select: none;
       -ms-user-select: none;
           user-select: none;
-  background: -webkit-gradient(linear, left top, left bottom, from(white), to(black));
-  background: -o-linear-gradient(top, white, black);
-  background: linear-gradient(to bottom, white, black);
+  background: -webkit-gradient(linear, left top, left bottom, from(white), to(#030303));
+  background: -o-linear-gradient(top, white, #030303);
+  background: linear-gradient(to bottom, white, #030303);
 }
 
-/*# sourceMappingURL=index.css.map*/
+/*# sourceMappingURL=about.css.map*/

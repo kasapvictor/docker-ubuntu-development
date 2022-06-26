@@ -1,6 +1,6 @@
 ################ Docker commands ################
 bash:
-	docker exec -it webpack-webflow zsh || winpty docker exec -it webpack-webflow zsh
+	docker exec -it webpack-public zsh || winpty docker exec -it webpack-public zsh
 
 build:
 	docker-compose build --no-cache

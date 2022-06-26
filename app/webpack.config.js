@@ -6,14 +6,20 @@ const mode = process.env.NODE_ENV;
 module.exports = {
   mode,
 
+  devtool: 'source-map',
+
   devServer: {
     hot: true,
     host: '0.0.0.0',
     port: 3000,
-    watchFiles: ['./src/**/*'],
+    watchFiles: {
+      paths: ['./public/**/*'],
+      options: {
+        ignored: '/node_modules/',
+        usePolling: true,
+      },
+    },
   },
-
-  watch: true,
 
   watchOptions: {
     poll: 1000,
@@ -23,10 +29,11 @@ module.exports = {
 
   entry: {
     index: './src/js/index.ts',
+    about: './src/js/about.js',
   },
 
   output: {
-    filename: 'js/index.js',
+    filename: 'js/[name].js',
     path: path.resolve(__dirname, 'public'),
   },
 

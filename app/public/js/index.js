@@ -1,11 +1,3 @@
-/*
- * ATTENTION: The "eval" devtool has been used (maybe by default in mode: "development").
- * This devtool is neither made for production nor for readable output files.
- * It uses "eval()" calls to create a separate source file in the browser devtools.
- * If you are trying to read the output file, select a different devtool (https://webpack.js.org/configuration/devtool/)
- * or disable the default devtool with "devtool: false".
- * If you are looking for production-ready output files, see mode: "production" (https://webpack.js.org/configuration/mode/).
- */
 /******/ (function() { // webpackBootstrap
 /******/ 	var __webpack_modules__ = ({
 
@@ -15,7 +7,8 @@
   \**************************/
 /***/ (function() {
 
-eval("// eslint-disable-next-line no-console\nconsole.log('--> COMMON JS FILE2');\nvar h = document.querySelector('header');\nh.innerHTML = 'text from common js!';\n\n//# sourceURL=webpack://frontend-webpack/./src/js/common.js?");
+// eslint-disable-next-line no-console
+console.log('--> COMMON JS FILE2');
 
 /***/ }),
 
@@ -26,7 +19,9 @@ eval("// eslint-disable-next-line no-console\nconsole.log('--> COMMON JS FILE2')
 /***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n// extracted by mini-css-extract-plugin\n\n\n//# sourceURL=webpack://frontend-webpack/./src/scss/home.scss?");
+__webpack_require__.r(__webpack_exports__);
+// extracted by mini-css-extract-plugin
+
 
 /***/ }),
 
@@ -37,7 +32,25 @@ eval("__webpack_require__.r(__webpack_exports__);\n// extracted by mini-css-extr
 /***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\nvar buttonHandler = function () {\n    // eslint-disable-next-line no-console\n    console.log('Click test Button OK');\n};\nvar Button = function (_a) {\n    var containerName = _a.containerName, text = _a.text, _b = _a.cls, cls = _b === void 0 ? \"\" : _b;\n    var button = document.createElement('button');\n    button.innerText = text;\n    button.classList.add(cls);\n    button.addEventListener('click', buttonHandler);\n    var container = document.querySelector(\".\".concat(containerName));\n    if (container) {\n        container.innerHTML = '';\n        container.append(button);\n    }\n};\n/* harmony default export */ __webpack_exports__[\"default\"] = (Button);\n\n\n//# sourceURL=webpack://frontend-webpack/./src/js/components/Button/Button.ts?");
+__webpack_require__.r(__webpack_exports__);
+var buttonHandler = function () {
+    // eslint-disable-next-line no-console
+    console.log('Click test Button OK');
+};
+var Button = function (_a) {
+    var containerName = _a.containerName, text = _a.text, _b = _a.cls, cls = _b === void 0 ? "" : _b;
+    var button = document.createElement('button');
+    button.innerText = text;
+    button.classList.add(cls);
+    button.addEventListener('click', buttonHandler);
+    var container = document.querySelector(".".concat(containerName));
+    if (container) {
+        container.innerHTML = '';
+        container.append(button);
+    }
+};
+/* harmony default export */ __webpack_exports__["default"] = (Button);
+
 
 /***/ }),
 
@@ -48,7 +61,13 @@ eval("__webpack_require__.r(__webpack_exports__);\nvar buttonHandler = function 
 /***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": function() { return /* reexport safe */ _Button__WEBPACK_IMPORTED_MODULE_0__[\"default\"]; }\n/* harmony export */ });\n/* harmony import */ var _Button__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./Button */ \"./src/js/components/Button/Button.ts\");\n\n\n\n//# sourceURL=webpack://frontend-webpack/./src/js/components/Button/index.ts?");
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": function() { return /* reexport safe */ _Button__WEBPACK_IMPORTED_MODULE_0__["default"]; }
+/* harmony export */ });
+/* harmony import */ var _Button__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./Button */ "./src/js/components/Button/Button.ts");
+
+
 
 /***/ }),
 
@@ -59,7 +78,13 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpac
 /***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"Button\": function() { return /* reexport safe */ _Button__WEBPACK_IMPORTED_MODULE_0__[\"default\"]; }\n/* harmony export */ });\n/* harmony import */ var _Button__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./Button */ \"./src/js/components/Button/index.ts\");\n\n\n\n//# sourceURL=webpack://frontend-webpack/./src/js/components/index.ts?");
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "Button": function() { return /* reexport safe */ _Button__WEBPACK_IMPORTED_MODULE_0__["default"]; }
+/* harmony export */ });
+/* harmony import */ var _Button__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./Button */ "./src/js/components/Button/index.ts");
+
+
 
 /***/ }),
 
@@ -70,18 +95,14 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpac
 /***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"foo\": function() { return /* binding */ foo; }\n/* harmony export */ });\nvar foo = function () {\n    console.log('EXPORTED FOO FROM HOME TS');\n};\n\n\n//# sourceURL=webpack://frontend-webpack/./src/js/home.ts?");
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "foo": function() { return /* binding */ foo; }
+/* harmony export */ });
+var foo = function () {
+    console.log('EXPORTED FOO FROM HOME TS');
+};
 
-/***/ }),
-
-/***/ "./src/js/index.ts":
-/*!*************************!*\
-  !*** ./src/js/index.ts ***!
-  \*************************/
-/***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _scss_home_scss__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../scss/home.scss */ \"./src/scss/home.scss\");\n/* harmony import */ var _img_image2_jpg__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../img/image2.jpg */ \"./src/img/image2.jpg\");\n/* harmony import */ var _common__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./common */ \"./src/js/common.js\");\n/* harmony import */ var _common__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_common__WEBPACK_IMPORTED_MODULE_2__);\n/* harmony import */ var _home__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./home */ \"./src/js/home.ts\");\n/* harmony import */ var _components__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./components */ \"./src/js/components/index.ts\");\n\n\n\n\n\n(0,_components__WEBPACK_IMPORTED_MODULE_4__.Button)({ containerName: 'button-wrapper', text: 'Button from JS', cls: 'button' });\nconsole.log('HOME PAGE!!');\n(0,_home__WEBPACK_IMPORTED_MODULE_3__.foo)();\n\n\n//# sourceURL=webpack://frontend-webpack/./src/js/index.ts?");
 
 /***/ }),
 
@@ -92,7 +113,7 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _scs
 /***/ (function(module, __unused_webpack_exports, __webpack_require__) {
 
 "use strict";
-eval("module.exports = __webpack_require__.p + \"img/image2.jpg\";\n\n//# sourceURL=webpack://frontend-webpack/./src/img/image2.jpg?");
+module.exports = __webpack_require__.p + "img/image2.jpg";
 
 /***/ })
 
@@ -196,11 +217,30 @@ eval("module.exports = __webpack_require__.p + \"img/image2.jpg\";\n\n//# source
 /******/ 	}();
 /******/ 	
 /************************************************************************/
-/******/ 	
-/******/ 	// startup
-/******/ 	// Load entry module and return exports
-/******/ 	// This entry module can't be inlined because the eval devtool is used.
-/******/ 	var __webpack_exports__ = __webpack_require__("./src/js/index.ts");
-/******/ 	
+var __webpack_exports__ = {};
+// This entry need to be wrapped in an IIFE because it need to be in strict mode.
+!function() {
+"use strict";
+/*!*************************!*\
+  !*** ./src/js/index.ts ***!
+  \*************************/
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _scss_home_scss__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../scss/home.scss */ "./src/scss/home.scss");
+/* harmony import */ var _img_image2_jpg__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../img/image2.jpg */ "./src/img/image2.jpg");
+/* harmony import */ var _common__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./common */ "./src/js/common.js");
+/* harmony import */ var _common__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_common__WEBPACK_IMPORTED_MODULE_2__);
+/* harmony import */ var _home__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./home */ "./src/js/home.ts");
+/* harmony import */ var _components__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./components */ "./src/js/components/index.ts");
+
+
+
+
+
+(0,_components__WEBPACK_IMPORTED_MODULE_4__.Button)({ containerName: 'button-wrapper', text: 'Button from JS', cls: 'button' });
+console.log('---> THIS IS INDEX TS!1 ! -_- !');
+(0,_home__WEBPACK_IMPORTED_MODULE_3__.foo)();
+
+}();
 /******/ })()
 ;
+//# sourceMappingURL=index.js.map
