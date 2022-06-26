@@ -4,9 +4,9 @@ services:
   web:
     build: .
 
-    image: ubuntu-frontend
+    image: ${IMAGE_NAME}
 
-    container_name: app-webpack
+    container_name: ${CONTAINER_NAME}
 
     restart: always
 
@@ -15,9 +15,9 @@ services:
     tty: true
 
     ports:
-      - "3000:3000"
-      - "4000:4000"
-      - "9000:9000"
+      - ${PORT_1}:${PORT_1}
+      - ${PORT_2}:${PORT_2}
+      - ${PORT_3}:${PORT_3}
 
     volumes:
       - "./app:/home/app"
