@@ -6,7 +6,7 @@ services:
 
     image: ${IMAGE_NAME}
 
-    container_name: webpack-for-template
+    container_name: ${CONTAINER_NAME}
 
     restart: always
 

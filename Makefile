@@ -12,6 +12,3 @@ up:
 
 down:
 	docker-compose down
-
-say:
-	echo ${CONTAINER_NAME}
