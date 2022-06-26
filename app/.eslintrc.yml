@@ -52,3 +52,6 @@ rules:
   "@typescript-eslint/no-empty-interface":
     - "error"
     - "allowSingleExtends": true
+  "no-new": 0
+  "import/no-unresolved": 0
+  "function-paren-newline": 0
