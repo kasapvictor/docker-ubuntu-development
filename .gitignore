@@ -49,6 +49,5 @@ Thumbs.db
 *.mov
 *.wmv
 
-.idea
-
-.vscode
+.idea/
+.vscode/
