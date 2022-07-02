@@ -15,4 +15,3 @@ build-prod: pretty lint
 
 build-dev:
 	npx webpack --mode development
-

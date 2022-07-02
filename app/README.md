@@ -11,3 +11,6 @@
 - yup
 - prettier
 - eslint
+- editorconfig
+
+  
