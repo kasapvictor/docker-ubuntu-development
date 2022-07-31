@@ -9,7 +9,7 @@ import { Button } from './components';
 if (import.meta.webpackHot) {
   // eslint-disable-next-line @typescript-eslint/ban-ts-comment
   // @ts-ignore
-  import.meta?.webpackHot.accept();
+  import.meta.webpackHot.accept();
 }
 
 Button({ containerName: 'button-wrapper', text: 'Button from JS1', cls: 'button' });
