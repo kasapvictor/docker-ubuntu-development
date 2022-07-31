@@ -6,7 +6,7 @@
   "scripts": {
     "server": "NODE_ENV=development webpack serve",
     "build-dev": "webpack --mode development",
-    "watch": "NODE_ENV=development webpack",
+    "watch": "NODE_ENV=development webpack"
   },
   "devDependencies": {
     "@babel/core": "^7.17.5",
