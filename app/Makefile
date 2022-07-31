@@ -1,5 +1,5 @@
 install:
-	npm install
+	npm ci || npm install
 
 server:
 	NODE_ENV=development npx webpack serve
