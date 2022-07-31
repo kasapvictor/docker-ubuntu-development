@@ -85,9 +85,31 @@ module.exports = {
         test: /\.tsx?$/,
         loader: 'ts-loader',
       },
-      // STYLES
+      // STYLES MODULE
       {
-        test: /\.(s[ac]|c)ss$/i,
+        test: /\.module\.(s[ac]|c)ss$/i,
+        use: [
+          {
+            loader: MiniCssExtractPlugin.loader,
+            options: {
+              publicPath: '../',
+            },
+          },
+          {
+            loader: 'css-loader',
+            options: {
+              modules: {
+                localIdentName: '[local]__[sha1:hash:hex:7]',
+              },
+            },
+          },
+          'postcss-loader',
+          'sass-loader',
+        ],
+      },
+      // STYLES NO MODULE
+      {
+        test: /^((?!\.module).)*(s[ac]|c)ss$/i,
         use: [
           {
             loader: MiniCssExtractPlugin.loader,

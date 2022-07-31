@@ -6,4 +6,5 @@ import { Button } from './components';
 
 Button({ containerName: 'button-wrapper', text: 'Button from JS1', cls: 'button' });
 
+// eslint-disable-next-line no-console
 console.log('HOME PAGE');
