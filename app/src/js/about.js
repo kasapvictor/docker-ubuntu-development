@@ -2,6 +2,10 @@ import '../scss/about.scss';
 
 import './common';
 
+if (import.meta.webpackHot) {
+  import.meta?.webpackHot.accept();
+}
+
 // eslint-disable-next-line no-console
 console.log('---> ABOUT PAGE');
 
