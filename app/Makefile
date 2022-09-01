@@ -10,9 +10,12 @@ pretty:
 lint:
 	npx eslint --fix src/js
 
+pre-commit: pretty lint
+
 build-prod: pretty lint
 	npx webpack --mode production
 
 build-dev:
 	npx webpack --mode development
+
 
