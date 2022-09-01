@@ -16,6 +16,8 @@ pretty:
 lint:
 	npx eslint --fix src/js
 
+pre-commit: pretty lint
+
 build-prod: rm-rf-css rm-rf-js pretty lint
 	NODE_ENV=production npx webpack --mode production
 
